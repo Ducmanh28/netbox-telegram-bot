@@ -533,7 +533,6 @@ async def cmd_tenant(update:Update, context: ContextTypes.DEFAULT_TYPE):
     msg = tenant_information(t_name)
     msg = msg.replace("_", "-")
     await update.message.reply_text(str(msg), parse_mode='Markdown')
-
 # Function to count Virtual Machine by its Platform
 def virtualmachineplatform_count(platform_name):
     try:
@@ -555,13 +554,11 @@ def virtualmachineplatform_count(platform_name):
             return "Error when process!"
     except Exception as e:
         return f"Error: {str(e)}"
-
 # Defind the message when user enter /platformofvm
 async def cmd_platformvm(update: Update, context: ContextTypes.DEFAULT_TYPE):
     p_name = ' '.join(context.args) if context.args else ""
     msg = virtualmachineplatform_count(p_name)
     await update.message.reply_text(str(msg), parse_mode='Markdown')
-
 # Defind the message when user enter /start
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = f"Welcome to *Bot_Tele_NetBox* - where you can search information at your NetBox easily!\n"
@@ -569,7 +566,6 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg += "Thanks for using it!\n\n"
     msg +=  f"Type `/help` for instructions"
     await update.message.reply_text(str(msg),parse_mode='Markdown')
-
 # Defind the message when user enter /help
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     commands = [
@@ -586,7 +582,6 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "11. Report Total: `/report (vm/device/ip/rack/all)`"
     ]
     await update.message.reply_text('Use the following commands:\n' + '\n'.join(commands), parse_mode='Markdown')
-
 # Defind the message when user enter text
 def handle_response(text: str) -> str:
     # Create your own response logic
@@ -605,7 +600,6 @@ def handle_response(text: str) -> str:
         return 'I\'m bot Telegram!'
 
     return 'Not having this command, type `/help` for help '
-
 # Defind the form of response
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type  
@@ -616,7 +610,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     response: str = handle_response(text)
     print('Bot:', response)
     await update.message.reply_text(response, parse_mode='Markdown')
-    
 # Main function to run Server
 if __name__ == '__main__':
     application = ApplicationBuilder().token(config.TOKENTELEGRAM).build()
