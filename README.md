@@ -140,6 +140,8 @@ Sử dụng một số chức năng của Bot
 
 ![](/Anh/Screenshot_969.png)
 
-Và còn nhiều chức năng khác nữa, hãy tự khám phá nhé.
+**Lưu ý:** Hãy lưu ý khi xem danh sách các tên thiết bị vì để sử dụng được định dạng Markdown, một số tên thiết bị đã bị thay đổi để phù hợp hơn cho việc hiển thị dưới dạng Markdown. Việc copy và sử dụng nguyên tên từ cách danh sách có thể sẽ khiến việc tìm kiếm tên thiết bị không cho ra kết quả vì bị sai tên.
+
+Và còn nhiều chức năng khác nữa, hãy tự khám phá nhé!
 ## IV. Tham khảo
 Nếu bạn quan tâm chi tiết hơn tool này, thãy tham khảo file [Intro](https://github.com/hocchudong/netbox-telegram-bot/blob/main/Intro.md)

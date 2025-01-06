@@ -444,7 +444,7 @@ def rack_information(r_name):
 
                 for device in devices_sorted:
                     u_positions = f"U{device.position}" if device.position else "Unknown"
-                    msg += f"{device.name} - {u_positions} \n"
+                    msg += f"`{escape_markdown(device.name)}` - *{u_positions}* \n"
             else:
                 msg += "No devices installed in this rack!"
                     
